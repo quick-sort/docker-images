@@ -10,7 +10,7 @@ jobs:
     outputs:
       folders: ${{ steps.changed.outputs.folders }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 2
 
@@ -32,7 +32,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: docker/login-action@v3
         with:
