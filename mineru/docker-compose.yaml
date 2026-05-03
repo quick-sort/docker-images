@@ -2,7 +2,7 @@ services:
   mineru-openai-server:
     image: ghcr.io/quick-sort/mineru:3.1.6
     container_name: mineru-openai-server
-    restart: always
+    restart: unless-stopped
     profiles: ["openai-server"]
     ports:
       - 30000:30000
@@ -30,7 +30,7 @@ services:
   mineru-api:
     image: ghcr.io/quick-sort/mineru:3.1.6
     container_name: mineru-api
-    restart: always
+    restart: unless-stopped
     profiles: ["api"]
     ports:
       - 8000:8000
@@ -60,7 +60,7 @@ services:
   mineru-router:
     image: ghcr.io/quick-sort/mineru:3.1.6
     container_name: mineru-router
-    restart: always
+    restart: unless-stopped
     profiles: ["router"]
     ports:
       - 8002:8002
@@ -95,7 +95,7 @@ services:
   mineru-gradio:
     image: ghcr.io/quick-sort/mineru:3.1.6
     container_name: mineru-gradio
-    restart: always
+    restart: unless-stopped
     profiles: ["gradio"]
     ports:
       - 7860:7860

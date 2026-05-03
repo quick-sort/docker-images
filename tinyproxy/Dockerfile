@@ -9,7 +9,5 @@ RUN mkdir -p /var/run/tinyproxy /var/log/tinyproxy && \
 # Copy default config that allows all connections
 COPY tinyproxy.conf /etc/tinyproxy/tinyproxy.conf
 
-EXPOSE 8888
-
 ENTRYPOINT ["tinyproxy", "-d"]
 CMD []
