@@ -8,6 +8,7 @@ Pre-built Docker images published to GitHub Container Registry (ghcr.io). Images
 |---|---|---|
 | [mineru](./mineru) | [![Docker Image](https://img.shields.io/badge/docker-ghcr.io%2Fquick--sort%2Fmineru-blue?logo=docker)](https://ghcr.io/quick-sort/mineru) | [MinerU](https://github.com/opendatalab/MinerU) document parsing service (GPU) based on [vllm-openai](https://hub.docker.com/r/vllm/vllm-openai) |
 | [mineru-cpu](./mineru-cpu) | [![Docker Image](https://img.shields.io/badge/docker-ghcr.io%2Fquick--sort%2Fmineru--cpu-blue?logo=docker)](https://ghcr.io/quick-sort/mineru-cpu) | [MinerU](https://github.com/opendatalab/MinerU) document parsing service (CPU) based on [vllm-openai-cpu](https://hub.docker.com/r/vllm/vllm-openai-cpu) |
+| [tinyproxy](./tinyproxy) | [![Docker Image](https://img.shields.io/badge/docker-ghcr.io%2Fquick--sort%2Ftinyproxy-blue?logo=docker)](https://ghcr.io/quick-sort/tinyproxy) | Lightweight HTTP/HTTPS proxy server |
 
 ## How It Works
 
@@ -21,6 +22,9 @@ docker pull ghcr.io/quick-sort/mineru:3.1.6
 
 # CPU
 docker pull ghcr.io/quick-sort/mineru-cpu:3.1.6
+
+# Tinyproxy
+docker pull ghcr.io/quick-sort/tinyproxy:1.11.3
 ```
 
 ## Adding a New Image

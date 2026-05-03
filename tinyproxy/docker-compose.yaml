@@ -1,0 +1,7 @@
+services:
+  tinyproxy:
+    image: ghcr.io/quick-sort/tinyproxy:1.11.3
+    container_name: tinyproxy
+    restart: always
+    ports:
+      - 8888:8888
