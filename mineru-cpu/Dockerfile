@@ -27,5 +27,8 @@ RUN python3 -m pip install -U 'mineru[core,vlm]==3.1.6' --break-system-packages 
 RUN /bin/bash -c "mineru-models-download -s huggingface -m all"
 
 ENV MINERU_MODEL_SOURCE=local
+
+VOLUME ["/vllm-workspace/output"]
+
 # Set the entry point to activate the virtual environment and run the command line tool
 ENTRYPOINT ["/bin/bash", "-c", "exec \"$@\"", "--"]
