@@ -1,6 +1,6 @@
 services:
   mineru-openai-server:
-    image: ghcr.io/quick-sort/mineru:3.1.6
+    image: ghcr.io/quick-sort/mineru-cpu:3.1.6
     container_name: mineru-openai-server
     restart: unless-stopped
     profiles: ["openai-server"]
@@ -21,7 +21,7 @@ services:
       test: ["CMD-SHELL", "curl -f http://localhost:30000/health || exit 1"]
 
   mineru-api:
-    image: ghcr.io/quick-sort/mineru:3.1.6
+    image: ghcr.io/quick-sort/mineru-cpu:3.1.6
     container_name: mineru-api
     restart: unless-stopped
     profiles: ["api"]
@@ -44,7 +44,7 @@ services:
       test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
 
   mineru-router:
-    image: ghcr.io/quick-sort/mineru:3.1.6
+    image: ghcr.io/quick-sort/mineru-cpu:3.1.6
     container_name: mineru-router
     restart: unless-stopped
     profiles: ["router"]
@@ -72,7 +72,7 @@ services:
       test: ["CMD-SHELL", "curl -f http://localhost:8002/health || exit 1"]
 
   mineru-gradio:
-    image: ghcr.io/quick-sort/mineru:3.1.6
+    image: ghcr.io/quick-sort/mineru-cpu:3.1.6
     container_name: mineru-gradio
     restart: unless-stopped
     profiles: ["gradio"]

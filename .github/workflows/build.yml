@@ -3,6 +3,11 @@ name: Build and Push Docker Images
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**/docker-compose.yaml'
+      - '**/docker-compose.yml'
+      - '**/docker-compose.*.yaml'
+      - '**/docker-compose.*.yml'
 
 jobs:
   detect:
