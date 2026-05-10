@@ -49,5 +49,9 @@ jobs:
         run: |
           TAG=$(cat "${{ matrix.folder }}/version")
           IMAGE="ghcr.io/quick-sort/${{ matrix.folder }}:${TAG}"
+
+          # Delete existing image with same tag to keep only one history
+          docker manifest rm "$IMAGE" 2>/dev/null || true
+
           docker build -t "$IMAGE" "${{ matrix.folder }}"
           docker push "$IMAGE"
